@@ -1,0 +1,132 @@
+<html>
+<head> 
+<title> DIVINE DESSERTS </title>
+<link rel="stylesheet" href="home.css">
+<link rel='icon' href='logo1.png'>
+</head>
+<body>
+<div id="menu">
+<img id=logo src='logo1.png'>
+<table id=contents>
+<tr> 
+<td> <a href='divine.html'>Home</a> </td>
+<td> <a href='divine_menu.html'>Menu </a></td>
+<td> <a href='divine_about.html'>About us </a></td>
+<td> <a href='divine_review.html'>Reviews </a></td>
+<td> <a href='divine_order.php'>Orders </a></td>
+<td> <a href='divine_connect.html'> Connect </a> </td>
+</tr>
+</table>
+</div>
+
+<div id="picture">
+<img id=pic1 src='baker2.jpg'>
+</div>
+
+<div id="quote">
+"Where there is a Whisk, <br>there is a bake!"
+<br>
+<span id=about>
+<a href='divine_about.html'>Learn more about us</a>
+</span>
+</div>
+
+<div>
+<div class="container">
+    <a href='divine_cupcakes.html'>
+	<img src="cupcake1.jpg" class="image" >
+	<div class="middle">
+	<div class="text">Cupcakes</div>
+  </div>
+  </a>
+</div>
+<div class="container">
+    <a href='divine_chocolates.html'>
+	<img src="chocolate.jpg" alt="Avatar" class="image" style="width:100%">
+  <div class="middle">
+	<div class="text">Chocolates</div>
+  </div>
+  </a>
+</div>
+<div class="container">
+    <a href='divine_cakes.html'>
+	<img src="cake.jpg" alt="Avatar" class="image" style="width:100%">
+  <div class="middle">
+	<div class="text">Cakes</div>
+  </div>
+  </a>
+</div>
+<div class="container">
+    <a href='divine_cookies.html'>
+	<img src="cookies.jpg" alt="Avatar" class="image" style="width:100%">
+  <div class="middle">
+	<div class="text">Cookies</div>
+  </div>
+  </a>
+</div>
+<div class="container">
+    <a href='divine_brownies.html'>
+	<img src="browines.jpg" alt="Avatar" class="image" style="width:100%">
+  <div class="middle">
+	<div class="text">Brownies</div>
+  </div>
+  </a>
+</div>
+</div>
+
+<div class=gottopage>
+Go To The <a href='divine_menu.html'><br>Menu </a> 
+</div>
+
+
+<div id=statsdiv>
+<table id=stats align=center> 
+<tr>
+<td><span class=numb>2018</span><br>Establishing Year</td>
+<td><span class=numb>500+</span><br>Happy Customers</td> 
+<td><span class=numb>100+</span><br>Customized Items</td>
+</tr>
+</table>
+</div>
+
+<div class=order_slide> 
+<img class="mySlides1" src="1.png">
+<img class="mySlides1" src="2.png">
+<img class="mySlides1" src="3.png">
+</div>
+
+<div class=order>
+<div class=gottopage>
+We can add a sweet twist to every occasion!
+<br>
+<a href='divine_order.php'> Order<br></a> your dessert today! 
+</div>
+</div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides1");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 2000);
+  
+}
+
+</script>
+
+
+<div id=connect>
+<img class=sml src='smlogos.jpg'>
+<div class=gottopage> <a href='divine_connect.html'>Connect</a> with me!</div>
+</div>
+
+</body>
+</html>

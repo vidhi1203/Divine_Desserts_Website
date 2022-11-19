@@ -1,0 +1,149 @@
+<html>
+<head> 
+<title> ORDER YOUR DESSERT </title>
+<link rel="stylesheet" type="text/css" href="order.css">
+<script>
+	function validate()
+	{
+		var name = document.ContactForm.nn;
+		var email = document.ContactForm.email;
+		var chkbx = document.ContactForm.spam;
+		var mob = document.ContactForm.cn;
+		var des = document.ContactForm.dessert;
+		var add = document.ContactForm.add;
+		if (name.value == "")
+		{
+			window.alert("Please enter your name.");
+			name.focus();
+			return false;
+		}
+		if (email.value=='')
+		{
+			alert('Please enter your Email ID.');
+			email.focus();
+			return false;
+		}
+		if (email.value.indexOf("@", 0) < 0 || email.value.indexOf('.',0)<0 )
+		{
+			alert('Please enter a valid Email ID.');
+			email.focus();
+			return false;
+		}
+		if (add.value=='')
+		{
+			alert('Please enter address of delivery.');
+			add.focus();
+			return false;
+		}
+		if (des.selectedIndex<1)
+		{
+			alert('Please select the prefered item.')
+			des.focus();
+			return false;
+		}
+	}
+
+	function EnableDisable(chkbx)
+		{
+			if(chkbx.checked == false)
+			{
+				document.ContactForm.cn.disabled = true;
+				document.ContactForm.cn.placeholder='No need to enter number';
+			}
+			else
+			{
+				document.ContactForm.cn.disabled = false;
+				document.ContactForm.cn.placeholder='Mobile Number here';
+			}
+		}
+</script>
+</head>
+<body>
+	<div id="menu"></div>
+	<img id=logo src='logo1.png'>
+		<table id=contents>
+			<tr> 
+			<td> <a href='divine.html'>Home</a> </td>
+			<td> <a href='divine_menu.html'>Menu </a></td>
+			<td> <a href='divine_about.html'>About us </a></td>
+			<td> <a href='divine_review.html'>Reviews </a></td>
+			<td> <a href='divine_order.html'>Orders </a></td>
+			<td> <a href='divine_connect.html'> Connect </a> </td>
+			</tr>
+		</table>
+	</div>
+
+	<form action='confirm.php' method='POST' name='ContactForm' onsubmit="return validate()">
+		<div class=tables>
+		<table class=form>
+			<th colspan=2>Personal Details</th>
+			<tr>
+				<td class='label'> Name: </td>
+				<td> <input type="text" name=nn placeholder="John Green"> </td></tr>
+			<tr>
+				<td class='label'> Email ID: </td>
+				<td> <input type="text" placeholder="john.green@gmail.com" name='email'> </td>
+			</tr>
+				<td class='label'> Delivery Address: </td>
+				<td> <textarea name="add" rows="4" col="20"></textarea> </td>
+			</tr>
+			<tr><td colspan="2" class='label'> <input type="checkbox" name="spam" onclick="EnableDisable(this);" checked> Send me updates via WhatsApp</td></tr>
+			<tr>
+				<td class='label'> WhatsApp Number: </td>
+				<td> <input type="text" name=cn placeholder="Mobile Number"> </td>
+			</tr>
+		</table>
+			<table class=form>
+				<th colspan=2>Order Details&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+			<tr>
+				<td class='label'> Item:</td>
+				<td> 
+					<select name=dessert value='' type=text>
+						<option vlaue='0'> Any one</option>
+						<option value='Cake'> Cakes  </option>
+						<option value='Brownie'> Brownies </option>
+						<option value="Chocolate" disabled> Chocolates </option>
+						<option value="Cookies"> Cookies </option>
+						<option value="Cakejar"> Cakejars</option>
+						</select>
+				</td>
+			</tr>
+			<tr>
+				<td class='label'> Order Expected on:</td>
+				<td> <input type="date" name="expdate"> </td>
+			</tr>
+			<tr>
+				<td class='label'> Expected Time:</td>
+				<td> <input type="time" name="exptime"></td>
+			</tr>
+			<tr>
+				<td class='label'> Delivery Mode: </td>
+				<td>
+					<select name=delivery value='' type=text>
+					<option value="Swiggy"> Swiggy </option>
+					<option value="BellBoy"> BellBoy </option>
+					<option value="vFast"> VFast </option>>
+					<option value="Pick up" selected> Pick up from bakery </option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td class='label'> Payment Mode: </td>
+				<td>	
+					<input type="radio" name="pay" value="gpay" checked> GPay <br>
+					<input type="radio" name="pay" value="cod"> Cash On delivery<br>
+					<input type="radio" name="pay" value="paytm"> PayTM <br>
+					<input type="radio" name="pay" value="bank"> Bank Transfer <br>
+				</td>
+			</tr>
+		
+		</table>
+	</div>
+	<br>
+		<div class=button >
+			<input type="reset" value="Reset">
+			<input type='submit' value='Order' >
+		</div>
+	</form>
+	</body>
+	</html>

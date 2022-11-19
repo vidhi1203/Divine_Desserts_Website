@@ -1,0 +1,108 @@
+#logo
+{
+	width:130px;
+	height:130px;
+}
+
+#contents
+{
+	float:right;
+	width:900px;
+	font-size:30px;
+    height:100px;
+    font-family: Verdana, Geneva, sans-serif;
+}
+a
+{
+	color:#ed66cb;
+}
+
+a:hover
+{
+	color:skyblue;
+}  
+
+.quote
+{
+    font-style:italic;
+    color:white;
+    font-size:30px;
+}
+.review
+{
+    width:500px;
+    height:250px;
+    text-align:center;
+    padding:50px;
+    margin:70px;
+    margin-left:150px;
+    float:left;
+    font-size:20px;
+    border-radius: 10px;
+}
+
+.image 
+{
+    margin-left:100px;
+    margin-top:140px;
+    width:250px;
+    height:350px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.425), 0 6px 20px 0 rgba(0, 0, 0, 0.76);
+    border-radius: 10px;
+}
+
+#review1
+{
+    background:linear-gradient(-130deg,#1f91bb, #23a6d5, #23d5ab, #12f1bd);
+    background-size: 400% 400%;
+    animation: colorchange 10s ease-in infinite;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.425), 0 6px 20px 0 rgba(0, 0, 0, 0.76);
+}
+
+#review2
+{
+    background:linear-gradient(-130deg,  #f5005e, #e73c7e,#dd3fbb,#e061cb);
+    background-size: 400% 400%;
+    animation: colorchange 10s ease-in infinite;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.425), 0 6px 20px 0 rgba(0, 0, 0, 0.76);
+}
+
+#review3
+{
+    background:linear-gradient(-130deg,rgb(16, 184, 0),rgb(0, 255, 76),rgba(200, 255, 0, 0.836),rgb(217, 255, 2));
+    background-size: 400% 400%;
+    animation: colorchange 10s ease-in infinite;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.425), 0 6px 20px 0 rgba(0, 0, 0, 0.76);
+}
+
+#review4
+{
+    background:linear-gradient(-130deg,#ff5e62,#e66369,#f07c43 ,#ff9966  );
+    background-size: 400% 400%;
+    animation: colorchange 10s ease-in infinite;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.425), 0 6px 20px 0 rgba(0, 0, 0, 0.76);
+}
+
+#review5
+{
+    background:linear-gradient(-130deg,#470461,#61044d,#ca1484,#aa076c);
+    background-size: 400% 400%;
+    animation: colorchange 10s ease-in infinite;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.425), 0 6px 20px 0 rgba(0, 0, 0, 0.76);
+}
+
+#review6
+{
+    background:linear-gradient(-130deg,#e69224,#db9f51,#e2b576,#eacda3  );
+    background-size: 400% 400%;
+    animation: colorchange 10s ease-in infinite;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.425), 0 6px 20px 0 rgba(0, 0, 0, 0.76);
+}
+
+@keyframes colorchange
+{
+    0% {background-position: 0% 50%;}
+	50% {background-position: 100% 50%;}
+	100% {background-position: 0% 50%;}
+}
+
